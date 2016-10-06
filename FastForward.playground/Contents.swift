@@ -67,11 +67,39 @@ func purchaseItem(bankBalance: inout Double  , itemPrice: Double) -> Double {
     return currentBankBalance
 }
 
-// If inout is used in the function then "&" is used when the function is called 
+// If inout is used in the function then "&" is used when the function is called
 purchaseItem(bankBalance: &currentBankBalance, itemPrice: shoes)
 
 var table = 50.00
 purchaseItem(bankBalance: &currentBankBalance, itemPrice: table)
+
+// Boolean
+
+var amITheBestTeacherEver = true
+amITheBestTeacherEver = false
+// true == false evaluates to be false and true == true evaluates to be true. The print statement will execute if any one of them evaluates to be true
+if true == false || true == true {
+    print( "WTFish")
+}
+
+//var hasFinishedDownloading: Bool = false
+//can be written as :
+// Returns false
+var hasFinishedDownloading: Bool = 1 == 2
+if !hasFinishedDownloading {
+    print("Need more time")
+}
+
+// returns true
+hasFinishedDownloading = true
+
+// 1 == 2 returns boool
+if 1 == 2 {
+    print("should not see this.")
+}
+else {
+    print("The comparision operator evaluates to be false")
+}
 
 
 
