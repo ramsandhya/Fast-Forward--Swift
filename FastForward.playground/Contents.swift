@@ -38,3 +38,51 @@ milesRan = pi
 var division = 13/5
 // This returns the remainder 
 var modulous = 13 % 5
+
+// Functions
+
+var length = 5
+var width = 10
+var area = length * width
+var currentBankBalance = 500.00
+var shoes = 350.00
+//func purchaseItem(bankBalance: Double  , itemPrice: Double) -> Double {
+//    if itemPrice <= bankBalance {
+//        currentBankBalance = bankBalance - itemPrice
+//    }
+//    return currentBankBalance
+//}
+//
+//purchaseItem(bankBalance: currentBankBalance, itemPrice: shoes)
+//
+//var table = 50.00
+//purchaseItem(bankBalance: currentBankBalance, itemPrice: table)
+
+
+// Inout is used to modify the parameter passed in the function (which is nothing but the variable)
+func purchaseItem(bankBalance: inout Double  , itemPrice: Double) -> Double {
+    if itemPrice <= bankBalance {
+        bankBalance = bankBalance - itemPrice
+    }
+    return currentBankBalance
+}
+
+// If inout is used in the function then "&" is used when the function is called 
+purchaseItem(bankBalance: &currentBankBalance, itemPrice: shoes)
+
+var table = 50.00
+purchaseItem(bankBalance: &currentBankBalance, itemPrice: table)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
