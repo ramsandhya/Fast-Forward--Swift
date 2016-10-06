@@ -119,8 +119,26 @@ else {
     print("Access Denied")
 }
 
+// Arrays
 
+var employee1Slary = 45000.00
+var employee2Salary = 54000.00
+var employee3Salary = 100000.00
+var emloyee4Salary = 20000.00
 
+// Array can take any type of data unless it is explicitly typed.
+var employeeSalaries = [45000.00, 54000.00, 100000.00, 20000.00]
+
+// An array of type String is only declared but not intitialized.
+var students : [String]
+// students.count will not work and the program will crash.
+
+// this is creating an empty array of type string. It must be intialized so that we can work on it later.
+var studentsList = [String]()
+studentsList.count
+
+// Command click on append gives a lot of documentation to read about the different aspects of array
+studentsList.append("John")
 
 
 
