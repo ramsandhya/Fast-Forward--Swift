@@ -75,6 +75,7 @@ purchaseItem(bankBalance: &currentBankBalance, itemPrice: table)
 
 // Boolean
 
+//Comparision operators - ==, !=, >=, <=
 var amITheBestTeacherEver = true
 amITheBestTeacherEver = false
 // true == false evaluates to be false and true == true evaluates to be true. The print statement will execute if any one of them evaluates to be true
@@ -101,8 +102,22 @@ else {
     print("The comparision operator evaluates to be false")
 }
 
+// Logical operators
 
+let allowedEntry = false
 
+if !allowedEntry {
+    print("Not Allowed")
+}
+let enteredCode = true
+let passedRetinaScan = false
+let iAmTomCruise = false
+if enteredCode && passedRetinaScan || iAmTomCruise {
+    print("Welcome")
+}
+else {
+    print("Access Denied")
+}
 
 
 
