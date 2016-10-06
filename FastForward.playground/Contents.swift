@@ -140,8 +140,32 @@ studentsList.count
 // Command click on append gives a lot of documentation to read about the different aspects of array
 studentsList.append("John")
 
+// Loops
 
+// Repeat loop:
+//  To calculate the 10% commission of every salary- we need to loop through evevry salary.
+// to avoid the program to crash, the index which increments should eventually meet a condition to stop the program. If we comment out the i++ line then program goes to an infinite loop.
+var i = 0
+repeat {
+    employeeSalaries[i] = employeeSalaries[i] + employeeSalaries[i] * 0.1
+    i += 1
+} while (i < employeeSalaries.count)
 
+// for in loop:
+for i in 0..<employeeSalaries.count {
+    employeeSalaries[i] = employeeSalaries[i] + employeeSalaries[i] * 0.1
+}
+
+// 1 an d 5 both are inclusive.
+for x in 1...5 {
+    print(x)
+}
+
+// for each loop
+// Here the during every iteration the each salary from the employeeSalaries array is being assigned to the salary variable. This loop method is less extraneous. 
+for salary in employeeSalaries {
+    print ("Salary : \(salary)")
+}
 
 
 
