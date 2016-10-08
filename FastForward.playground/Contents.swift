@@ -162,12 +162,42 @@ for x in 1...5 {
 }
 
 // for each loop
-// Here the during every iteration the each salary from the employeeSalaries array is being assigned to the salary variable. This loop method is less extraneous. 
+// Here the during every iteration the each salary from the employeeSalaries array is being assigned to the salary variable. This loop method is less extraneous.
 for salary in employeeSalaries {
     print ("Salary : \(salary)")
 }
 
+// Dictionaries
 
+// Dictionary initialization
+var namesOfIntegers = [Int: String] ()
+
+// 3 is the key not index
+namesOfIntegers[3] = "three"
+
+// To empty the dictionary
+namesOfIntegers = [:]
+
+// Initialized a dictionary with reference name airports
+var airports = [String : String]()
+
+// Adding key value pairs to the dic.
+airports["LAX"] = "Los Angeles"
+airports["LHR"] = "London Heathrow"
+airports["NEW"] = "Newark"
+airports.count
+print("\(airports)")
+// remove an item
+airports["NEW"] = nil
+
+// The key and val variable is created and are passed inthe print statement. This is how we write the for in loop to extract something out of some collection which is the dictionary. 
+for key in airports.keys {
+    print("key is \(key)")
+}
+
+for val in airports.values {
+    print("value is \(val)")
+}
 
 
 
