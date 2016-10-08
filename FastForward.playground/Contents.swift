@@ -190,7 +190,7 @@ print("\(airports)")
 // remove an item
 airports["NEW"] = nil
 
-// The key and val variable is created and are passed inthe print statement. This is how we write the for in loop to extract something out of some collection which is the dictionary. 
+// The key and val variable is created and are passed inthe print statement. This is how we write the for in loop to extract something out of some collection which is the dictionary.
 for key in airports.keys {
     print("key is \(key)")
 }
@@ -198,6 +198,46 @@ for key in airports.keys {
 for val in airports.values {
     print("value is \(val)")
 }
+
+/*
+Swift changed "where" in "if let" statement and replaced it with ","
+if let v = vehicle , let m = v.model {
+    print("m")
+}
+*/
+
+// Optionals
+
+var lotteryWinnings: Int?
+
+//print(lotteryWinnings!) - This is a bad practice to explicitly unwrap the optional- MP- It crashes the program.
+
+// Recommended syntax
+// If lotteryWinnings had no value then as per the optional declaration, It would not print anything. Check- uncomment next line
+
+lotteryWinnings = 100
+if lotteryWinnings != nil {
+    print(lotteryWinnings!)
+}
+
+// One more - most preferred
+// A new constant is created named winnings and is assigned the value of lotteryWinnings "if there is a value" and then print the constant .
+if let winnings = lotteryWinnings {
+    print(winnings)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
