@@ -226,9 +226,39 @@ if let winnings = lotteryWinnings {
     print(winnings)
 }
 
+// The Car class can be used to instantiate a car object.
+// The instance's property model can have a value- something or nil.
+class Car {
+    var model: String?
+}
 
+// The vehicle instance is declared with a type of optional String meaning this vehicle instance can have a nil value or something.
+//The vehicle is declared as a type of the Car class.
+var vehicle: Car?
 
+//if let v = vehicle {
+//    if let m = v.model {
+//        print(m)
+//    }
+//}
 
+/* vehicle variable is assgned a value of instance of Car. It is assigned a space in the memory.
+ That vehicle's model property is now assigned a value called "Bronco", so its not nil now, which has a separate space inthe memory.
+ So, constant v is created. if let statement is doing a null check on vehicle and its model.
+ Now, if both of them has a value then print m. If either of the value does not exist then the print statement is not executed.
+*/
+vehicle = Car()
+vehicle?.model = "Bronco"
+if let v = vehicle, let m = v.model {
+    print(m)
+}
+
+//Using if let to extract the values in case of optionals is recommended.
+var cars : [Car]?
+cars = [Car]()
+if let carArr = cars , carArr.count > 0 {
+   print(carArr)
+}
 
 
 
