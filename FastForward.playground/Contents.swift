@@ -257,8 +257,50 @@ if let v = vehicle, let m = v.model {
 var cars : [Car]?
 cars = [Car]()
 if let carArr = cars , carArr.count > 0 {
-   print(carArr)
+   print(carArr.count)
 }
+
+/*
+ Takeaways:
+ If you don't know and can't guarantee that there will be a value or not use a ? mark, make it optional.
+ If you absolutely guarantee that your variable's gonna have a value in it (may be we are not giving it the user or the user will give it at later point of time) then and you are guaranteeing that you'll have a valure in the later point of time then use ! mark.
+ If you use the ! then it better to use some safety code by using computed properties.
+ 
+ */
+
+class Person {
+//_age is getting declared along with being expilicitly unwrapped
+    var _age: Int!
+// Ti make sure it has a valure later we initialize age with a computed property and return _age with a value.
+    var age: Int {
+        if _age == nil {
+            _age = 15
+        }
+        return _age
+    }
+}
+
+/*
+ In the class Dog we learnt that we don't need to have !(impliciciltly unwrappped optional) or ?(optional) if you intialize it in the ocnstructor because when a Dog object is created at runtimr then it will have a vlue in  it.
+IF YOU CARE THAT IF THERE IS A VALUE OR NOT THEN "DO THIS WITH SOME VALUE" THEN USE !
+ IF YOU DON'T, MEANING IF THERE IS NO VALUE, DO NOTHING THEN USE ?
+ */
+var Jack = Person()
+Jack._age
+Jack.age
+
+class Dog {
+    var species: String
+    
+    init(someSpecies: String) {
+        self.species = someSpecies
+    }
+}
+var lab = Dog(someSpecies: "Black Lab")
+lab.species
+
+
+
 
 
 
