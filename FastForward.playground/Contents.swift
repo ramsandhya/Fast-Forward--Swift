@@ -282,7 +282,7 @@ class Person {
 
 /*
  In the class Dog we learnt that we don't need to have !(impliciciltly unwrappped optional) or ?(optional) if you intialize it in the ocnstructor because when a Dog object is created at runtimr then it will have a vlue in  it.
-IF YOU CARE THAT IF THERE IS A VALUE OR NOT THEN "DO THIS WITH SOME VALUE" THEN USE !
+IF YOU CARE THAT IF THERE IS A VALUE OR NOT THEN "DO THIS WITH SOME VALUE " THEN USE !
  IF YOU DON'T, MEANING IF THERE IS NO VALUE, DO NOTHING THEN USE ?
  */
 var Jack = Person()
@@ -297,9 +297,23 @@ class Dog {
     }
 }
 var lab = Dog(someSpecies: "Black Lab")
-lab.species
-
-
+/*
+ Tips:
+ Toggle navigation bar - Cmd 0 
+ Access each item in the Navigation bar = Cmd 1, 2, 3,4 till 8
+ Toggle Utility BAr = Cmd Opt 0
+ Access each item in the Utility bar - CMd Opt 1,2 3 till 6
+ Toggle Debug area = Cmd Sft Y  
+ Show the Asst editor -  Cmd Opt Enter
+ To hide it - Cmd Enter
+ To open a file quickly - Cmd Sft O
+ To open another file int he Asst editor then Cmd Sft O and hold the option key
+ To go back to the single editor mode = Cmd enter
+ 
+ Storyboard tips:
+ Select the element in the scene and select Option key and it will show the distance from the nearest element. Keep hovering to the other elements and it will still show the the result of the other elements too.
+ 
+ */
 
 
 
