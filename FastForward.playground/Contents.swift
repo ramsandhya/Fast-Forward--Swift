@@ -317,7 +317,7 @@ var lab = Dog(someSpecies: "Black Lab")
 
 // Swift 3.0.1-------
 
-// The Basics
+// THE BASICS
 
 let maximumNumberOfAttempts = 10
 var currentLoginAttempt = 0
@@ -326,6 +326,30 @@ var welcomeMessage: String
     welcomeMessage = "Hello"
 print("The current message of welcoming someone is \(welcomeMessage)")
 
+// Type ALiases
+typealias AudioSample = UInt16
+var maxAmplitudeFound = AudioSample.min
+var turnipsAreDelicious = false
+if turnipsAreDelicious {
+    print("Turnips are delcious")
+} else {
+    print("Turnips are horrible")
+}
+//Tuples
+let httpErrorCode = (404, "Page not found")
+let (statusCode, statusMessage) = httpErrorCode
+print(statusCode, statusMessage)
+
+//To avoid any of the portion of a tuple use underscore
+let (_, justTheStatus) = httpErrorCode
+print(justTheStatus)
+
+// Tuples use the index which starts from 0 just like arrays.
+print(httpErrorCode.0)
+
+// We can name them 
+var person = (name: "Samy", age: 39)
+print("The person's name is \(person.name)")
 
 
 
