@@ -315,6 +315,19 @@ var lab = Dog(someSpecies: "Black Lab")
  
  */
 
+// Swift 3.0.1-------
+
+// The Basics
+
+let maximumNumberOfAttempts = 10
+var currentLoginAttempt = 0
+var x = 0.0, y = 0.9, z = 0.7
+var welcomeMessage: String
+    welcomeMessage = "Hello"
+print("The current message of welcoming someone is \(welcomeMessage)")
+
+
+
 
 
 
