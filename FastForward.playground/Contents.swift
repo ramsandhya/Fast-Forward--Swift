@@ -463,7 +463,19 @@ let contentHeight = 40
 let hasHeader = true
 let rowHeight = contentHeight + (hasHeader ? 50 : 20)
 
+// Nil Coalescing operator
+var isBoy = false
+var defaultColor = "red"
+var gender: String? = isBoy ? "Bob" : "Ruby"
+//var colorChoice = (gender ?? defaultColor ) ? "pink" : "blue"
 
+let defautColorName = "red"
+var userDefinedCOlorName: String?
+var colorNameToUse = userDefinedCOlorName ?? defaultColor
+
+let defaultColorName1 = "red"
+var userDefinedColorName1: String? = "pink"
+var colorNameToUse1 = userDefinedColorName1 ?? defaultColorName1
 
 
 
