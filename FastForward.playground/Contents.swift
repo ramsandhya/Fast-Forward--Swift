@@ -374,7 +374,7 @@ if convertedNumber != nil {
 
 // Optional binding 
 if let actualNumber = Int(possibleNumber) {
-    print(possibleNumber)
+    print(actualNumber)
 }
 
 if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
@@ -389,11 +389,15 @@ if let firstNumber = Int("4"){
     }
 }
 
+// Implicitly unwrapped optionals
 
-
-
-
-
+let possibleString : String? = "Hello"
+let forcedString: String = possibleString!
+let assumedString: String! = "Hello again"
+let implicitString: String = assumedString
+if assumedString != nil {
+    print("Y")
+}
 
 
 
