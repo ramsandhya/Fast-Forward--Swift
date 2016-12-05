@@ -321,7 +321,7 @@ var lab = Dog(someSpecies: "Black Lab")
  2. Tuples
  3. Optionals
  4. Type inference
- 5.
+ 5. Range operators
  
 
 */
@@ -447,7 +447,22 @@ do {
 // Assertions
 let theAge = -3
 //assert(theAge >= 0, "Age has to be more than 0.")
-// theAge >=0 is like a watchdog, if that is true then the codes will keep executing successfully, in this example, theAge was -3 and the assert condition evaluated false the assertion is triggered terminating the application and consoled the message.
+// theAge >=0 is like a watchdog, if that is true then the codes will keep executing successfully, in this example, theAge was -3 and the assert condition evaluated false and consoled the message.
+
+// OPERATORS
+// Assignment Operators
+
+var (xo, yo) = (1, 2)
+if xo == yo {
+    print("y")
+}else {
+    print("n")
+}
+// Ternary conditional operator
+let contentHeight = 40
+let hasHeader = true
+let rowHeight = contentHeight + (hasHeader ? 50 : 20)
+
 
 
 
