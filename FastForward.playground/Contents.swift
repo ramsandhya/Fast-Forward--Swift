@@ -388,9 +388,7 @@ if let firstNumber = Int("4"){
         }
     }
 }
-
 // Implicitly unwrapped optionals
-
 let possibleString : String? = "Hello"
 let forcedString: String = possibleString!
 let assumedString: String! = "Hello again"
@@ -398,6 +396,30 @@ let implicitString: String = assumedString
 if assumedString != nil {
     print("Y")
 }
+// Error handling
+
+func canThrowAnError() throws {
+}
+do{
+    try canThrowAnError()
+} catch {
+    
+}
+
+
+class VC {
+    var num: Int!
+    
+    func myLog() {
+        let x:Int = num
+        print(x)
+    }
+    
+}
+
+let vc = VC()
+vc.num = 2
+vc.myLog()
 
 
 
