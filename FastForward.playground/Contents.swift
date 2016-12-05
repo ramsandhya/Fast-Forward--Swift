@@ -313,9 +313,18 @@ var lab = Dog(someSpecies: "Black Lab")
  Storyboard tips:
  Select the element in the scene and select Option key and it will show the distance from the nearest element. Keep hovering to the other elements and it will still show the the result of the other elements too.
  
- */
+ 
 
 // Swift 3.0.1-------
+// Topics covered in Swift but not in C or Objective-C as new concepts are:
+ 1. String interpolation
+ 2. Tuples
+ 3. Optionals
+ 4. Type inference
+ 5.
+ 
+
+*/
 
 // THE BASICS
 
@@ -350,6 +359,39 @@ print(httpErrorCode.0)
 // We can name them 
 var person = (name: "Samy", age: 39)
 print("The person's name is \(person.name)")
+
+// Optionals
+var serverResponseCode: Int? = 404
+serverResponseCode = nil
+var surveyAnswer : String?
+let possibleNumber = "123"
+let convertedNumber = Int(possibleNumber)
+
+// Forced unwrapping
+if convertedNumber != nil {
+    print("Yay! It has a value of \(convertedNumber)")
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
