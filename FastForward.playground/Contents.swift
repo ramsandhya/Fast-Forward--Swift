@@ -369,8 +369,28 @@ let convertedNumber = Int(possibleNumber)
 
 // Forced unwrapping
 if convertedNumber != nil {
-    print("Yay! It has a value of \(convertedNumber)")
+    print("Yay! It has a value of \(convertedNumber!)")
 }
+
+// Optional binding 
+if let actualNumber = Int(possibleNumber) {
+    print(possibleNumber)
+}
+
+if let firstNumber = Int("4"), let secondNumber = Int("42"), firstNumber < secondNumber && secondNumber < 100 {
+    print("\(firstNumber) < \(secondNumber) < 100")
+}
+
+if let firstNumber = Int("4"){
+    if let secondNumber = Int("42"){
+        if firstNumber < secondNumber && secondNumber < 100 {
+            print("\(firstNumber) < \(secondNumber) < 100")
+        }
+    }
+}
+
+
+
 
 
 
