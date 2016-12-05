@@ -444,8 +444,10 @@ do {
 } catch {
     cleanDishes()
 }
-
-
+// Assertions
+let theAge = -3
+//assert(theAge >= 0, "Age has to be more than 0.")
+// theAge >=0 is like a watchdog, if that is true then the codes will keep executing successfully, in this example, theAge was -3 and the assert condition evaluated false the assertion is triggered terminating the application and consoled the message.
 
 
 
