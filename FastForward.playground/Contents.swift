@@ -421,7 +421,29 @@ let vc = VC()
 vc.num = 2
 vc.myLog()
 
+//Error HAndling
+func prepareSandwich() throws{
+    
+}
+func eatSandwich(){
 
+}
+func cleanDishes() {}
+struct Ingredients {}
+
+class SandwichErrors {
+    class forDirtyDishes: Error {
+        
+    }
+    static var forMissingIngredients: Error!
+    }
+
+do {
+    try prepareSandwich()
+    eatSandwich()
+} catch {
+    cleanDishes()
+}
 
 
 
