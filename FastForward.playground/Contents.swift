@@ -477,8 +477,23 @@ let defaultColorName1 = "red"
 var userDefinedColorName1: String? = "pink"
 var colorNameToUse1 = userDefinedColorName1 ?? defaultColorName1
 
+//STRINGS AND CHARACTERS
 
+// assign an empty string to a variable
+var emptyString = ""
 
+// instantiate a string instance with the initializer
+var anotherString = String()
+
+let someStings: [Character] = ["H", "t"]
+let message = String(someStings)
+
+var theMessage = "Hello there"
+var exc: Character = "!"
+var theMessage1 = theMessage + String(exc)
+theMessage += String(exc)
+var nextMessage = ""
+theMessage.append(exc)
 
 
 
