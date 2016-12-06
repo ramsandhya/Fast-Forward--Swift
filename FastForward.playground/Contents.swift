@@ -505,8 +505,16 @@ greet.startIndex
 greet.characters.count
 greet[greet.index(after: greet.startIndex)]
 greet[greet.index(greet.startIndex, offsetBy: 2)]
+greet.characters.indices
 
+for index in greet.characters.indices {
+    print("\(greet[index])", terminator: " ")
+}
 
+//Inserting
+var welcome = "hello"
+welcome.insert("!", at: welcome.endIndex)
+welcome.insert(contentsOf: " there".characters, at: welcome.index(before: welcome.endIndex))
 
 
 
