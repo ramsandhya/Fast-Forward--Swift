@@ -488,14 +488,23 @@ var anotherString = String()
 let someStings: [Character] = ["H", "t"]
 let message = String(someStings)
 
-var theMessage = "Hello there"
+var theMessage = "Hello"
 var exc: Character = "!"
 var theMessage1 = theMessage + String(exc)
 theMessage += String(exc)
+print(theMessage)
 var nextMessage = ""
 theMessage.append(exc)
+var chef = "chef"
+var chile = chef.characters.count
 
-
+//Accessing characters in a string
+var greet = "chef!"
+greet.endIndex
+greet.startIndex
+greet.characters.count
+greet[greet.index(after: greet.startIndex)]
+greet[greet.index(greet.startIndex, offsetBy: 2)]
 
 
 
