@@ -522,6 +522,15 @@ var myArr = [Int]()
 var myArra = Array(repeatElement(2.2, count: 6))
 var myA = ["A", "B", "C"]
 
+var shoppingList = ["Chocolate Spread", "Cheese", "Butter"]
+for item in shoppingList {
+    print(item)
+}
+
+for (index, item) in shoppingList.enumerated() {
+    print("\(index). \(item) ")
+}
+
 // Sets
 var set = Set<Character>()
 var sett: Set<String> = ["Ak", "Bm", "Cn"]
