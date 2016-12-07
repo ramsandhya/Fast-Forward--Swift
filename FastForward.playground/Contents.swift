@@ -529,7 +529,13 @@ let oddDigits: Set = [1, 7, 31, 67]
 let evenDigits: Set = [6, 42, 86, 444]
 oddDigits.union(evenDigits).sorted()
 
-
+// Dictionaries
+var dicOfIntegers = [Int : String]()
+dicOfIntegers[16] = "sixteen"
+dicOfIntegers
+dicOfIntegers = [:]
+dicOfIntegers
+ 
 
 
 
