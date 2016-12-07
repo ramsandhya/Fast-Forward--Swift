@@ -516,6 +516,12 @@ var welcome = "hello"
 welcome.insert("!", at: welcome.endIndex)
 welcome.insert(contentsOf: " there".characters, at: welcome.index(before: welcome.endIndex))
 
+//COLLECTION TYPES
+// Arrays
+var myArr = [Int]()
+var myArra = Array(repeatElement(2.2, count: 6))
+var myA = ["A", "B", "C"]
+
 
 
 
