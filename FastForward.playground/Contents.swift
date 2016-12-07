@@ -558,7 +558,11 @@ default:
     print("You are grown up.")
 }
 
-
+//for in loop in dictionary
+let numLegs = ["Spider": 8, "Cow": 4, "Ant": 6]
+for (species, legs) in numLegs {
+    print("\(species)s have \(legs) legs.")
+}
 
 
 
