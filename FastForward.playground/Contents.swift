@@ -522,6 +522,12 @@ var myArr = [Int]()
 var myArra = Array(repeatElement(2.2, count: 6))
 var myA = ["A", "B", "C"]
 
+// Sets
+var set = Set<Character>()
+var sett: Set<String> = ["Ak", "Bm", "Cn"]
+let oddDigits: Set = [1, 7, 31, 67]
+let evenDigits: Set = [6, 42, 86, 444]
+oddDigits.union(evenDigits).sorted()
 
 
 
