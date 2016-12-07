@@ -535,7 +535,19 @@ dicOfIntegers[16] = "sixteen"
 dicOfIntegers
 dicOfIntegers = [:]
 dicOfIntegers
- 
+
+//CONTROL FLOW
+
+//switch
+var theage = 9
+switch theage {
+case 4...10 where theage is Int :
+    print("Small kid")
+case 10...14:
+    print("Big kid")
+default:
+    print("You are grown up.")
+}
 
 
 
