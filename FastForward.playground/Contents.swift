@@ -564,12 +564,39 @@ for (species, legs) in numLegs {
     print("\(species)s have \(legs) legs.")
 }
 
+// while
+var ex = 0
+while ex < 5 {
+    //print(ex)
+    ex += 1
+}
 
+// chutes and ladders
+let finalSquare = 25
+var board = Array<Int>(repeating: 0, count: finalSquare + 1)
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
 
+board[03] // is equal to 8 (The diff between 11 and 3)
 
-
-
-
+var square = 0
+var diceRoll = 0
+while square < finalSquare {
+    // roll the dice
+    diceRoll += 1
+    print("\(diceRoll) - diceroll")
+    if diceRoll == 7 {
+        diceRoll = 1
+    }
+    // move by the rolled number
+    square += diceRoll
+    print("\(square) - at square after diceroll ")
+    if square < board.count {
+        square += board[square]
+        print("\(square) at square after ladder/chutes")
+    }
+}
+print("Game over!")
 
 
 
