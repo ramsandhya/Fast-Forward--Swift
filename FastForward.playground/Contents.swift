@@ -572,31 +572,31 @@ while ex < 5 {
 }
 
 // chutes and ladders
-let finalSquare = 25
-var board = Array<Int>(repeating: 0, count: finalSquare + 1)
-board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
-board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
-
-board[03] // is equal to 8 (The diff between 11 and 3)
-
-var square = 0
-var diceRoll = 0
-while square < finalSquare {
-    // roll the dice
-    diceRoll += 1
-    print("\(diceRoll) - diceroll")
-    if diceRoll == 7 {
-        diceRoll = 1
-    }
-    // move by the rolled number
-    square += diceRoll
-    print("\(square) - at square after diceroll ")
-    if square < board.count {
-        square += board[square]
-        print("\(square) at square after ladder/chutes")
-    }
-}
-print("Game over!")
+//let finalSquare = 25
+//var board = Array<Int>(repeating: 0, count: finalSquare + 1)
+//board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+//board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+//
+//board[03] // is equal to 8 (The diff between 11 and 3)
+//
+//var square = 0
+//var diceRoll = 0
+//while square < finalSquare {
+//    // roll the dice
+//    diceRoll += 1
+//    print("\(diceRoll) - diceroll")
+//    if diceRoll == 7 {
+//        diceRoll = 1
+//    }
+//    // move by the rolled number
+//    square += diceRoll
+//    print("\(square) - at square after diceroll ")
+//    if square < board.count {
+//        square += board[square]
+//        print("\(square) at square after ladder/chutes")
+//    }
+//}
+//print("Game over!")
 
 //Continue
 let puzzleInput = "Great minds think alike"
@@ -622,8 +622,41 @@ default:
     description += " an integer."
 }
 print(description)
+print("---------------")
 
+// Only Winning condition until you Land on 25
 
+let finalSquare = 25
+
+var board = Array<Int>(repeating: 0, count: finalSquare + 1)
+board[03] = +08; board[06] = +11; board[09] = +09; board[10] = +02
+board[14] = -10; board[19] = -11; board[22] = -02; board[24] = -08
+
+board[03] // is equal to 8 (The diff between 11 and 3)
+
+var square = 0
+var diceRoll = 0
+
+gameLoop: while square < finalSquare {
+    print("square now is \(square)")
+    print("before diceroll square is \(square)")
+    diceRoll += 1
+    print("diceroll is \(diceRoll)")
+    if diceRoll == 7 { diceRoll = 1 }
+    switch square + diceRoll {
+    case finalSquare:
+        // diceRoll will move us to the final square, so the game is over
+        break gameLoop
+    case let newSquare where newSquare > finalSquare:
+        // diceRoll will move us beyond the final square, so roll again
+        continue gameLoop
+    default:
+        // this is a valid move, so find out its effect
+        square += diceRoll
+        square += board[square]
+    }
+}
+print("Game over!")
 
 
 
