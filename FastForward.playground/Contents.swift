@@ -675,9 +675,47 @@ func greet(person: [String: String]) {
     print("I hope the weather is nice in \(location).")
 }
 
+//FUNCTIONS
+
 greet(person: ["name": "John"])
 // Prints "Hello John!"
 // Prints "I hope the weather is nice near you."
 greet(person: ["name": "Jane", "location": "Cupertino"])
 // Prints "Hello Jane!"
 // Prints "I hope the weather is nice in Cupertino."
+
+// when functions do not mean to a return value intentionally then use let _
+func printAndCount(string: String) -> Int {
+    print(string)
+    return string.characters.count
+}
+func printWithoutCounting(string: String) {
+    let _ = printAndCount(string: string)
+    
+}
+printAndCount(string: "hello, world")
+// prints "hello, world" and returns a value of 12
+printWithoutCounting(string: "hello, world")
+// prints "hello, world" but does not return a value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
