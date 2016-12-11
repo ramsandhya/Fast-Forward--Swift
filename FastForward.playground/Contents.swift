@@ -698,6 +698,21 @@ printAndCount(string: "hello, world")
 printWithoutCounting(string: "hello, world")
 // prints "hello, world" but does not return a value
 
+print("-----------")
+//Functions with tuples
+func minMax(array: [Int]) -> (min: Int, max: Int) {
+    var currentMin = array[0]
+    var currentMax = array[0]
+    for value in array[1..<array.count] {
+        if value < currentMin {
+            currentMin = value
+        } else if value > currentMax{
+            currentMax = value
+        }
+    }
+    return (currentMin, currentMax)
+}
+minMax(array: [3,67, 54, 32])
 
 
 
@@ -711,9 +726,18 @@ printWithoutCounting(string: "hello, world")
 
 
 
-
-
-
+ /*
+Takeways:
+1. In Swift 2, the first parameter label didn't need to be mentioned when function is called. Although, we need to define define in the function definition.
+ In swift 3, function definitio can have parameters like this- (_ first: Int, _ second: Int). We can call the function without the label name as - (3, 4)
+ 
+2. Static dipatch
+ Dynamic dispatch
+ 
+3. Comparable
+ Hashable
+ Equatable
+*/
 
 
 
