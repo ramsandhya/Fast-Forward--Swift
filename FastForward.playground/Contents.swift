@@ -748,15 +748,25 @@ import UIKit
 //arithmeticMean(54,2435,55,64,666,5)
 
 // Inout parameters
-func swapTwoInts(_ a: inout Int, _ b: inout Int){
-    let tempA = a
-    a = b
-    b = tempA
+//func swapTwoInts(_ a: inout Int, _ b: inout Int){
+//    let tempA = a
+//    a = b
+//    b = tempA
+//}
+//var one = 2
+//var another = 5
+//swapTwoInts(&one, &another)
+//print(one,another)
+
+// FUnction types
+func addTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a + b
 }
-var one = 2
-var another = 5
-swapTwoInts(&one, &another)
-print(one,another)
+func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
+    return a * b
+}
+var mathFunction: (Int, Int) -> Int = addTwoInts
+mathFunction(3, 5)
 
 
 
