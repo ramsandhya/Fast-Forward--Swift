@@ -738,16 +738,25 @@ import UIKit
 
 // Variadic parameters- parameters are passed as an array of the same type as mentioned during function is defined
 
-func arithmeticMean(_ numbers: Double...) -> Double {
-    var total: Double = 0
-    for number in numbers {
-        total += number
-    }
-    return total / Double(numbers.count)
+//func arithmeticMean(_ numbers: Double...) -> Double {
+//    var total: Double = 0
+//    for number in numbers {
+//        total += number
+//    }
+//    return total / Double(numbers.count)
+//}
+//arithmeticMean(54,2435,55,64,666,5)
+
+// Inout parameters
+func swapTwoInts(_ a: inout Int, _ b: inout Int){
+    let tempA = a
+    a = b
+    b = tempA
 }
-arithmeticMean(54,2435,55,64,666,5)
-
-
+var one = 2
+var another = 5
+swapTwoInts(&one, &another)
+print(one,another)
 
 
 
@@ -768,6 +777,11 @@ Takeways:
 3. Comparable
  Hashable
  Equatable
+ 
+4. A function can have at most one variadic parameter
+5. The parameters in a function is constant by default. It's value cannot be changed.
+   If we need to chenge it then we need to define the parameter as inout after the type is written. Inout makes the parameter act as a variable.
+   In-out parameters can't have a default value. Variadic parameters can't have inout keyword.
 */
 
 
