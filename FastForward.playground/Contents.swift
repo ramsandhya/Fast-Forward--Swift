@@ -717,26 +717,35 @@ import UIKit
 //print(bounds.min, bounds.max)
 
 //Functions with tuples and handling the empty array
-func minMaxi(array: [Int]) -> (min: Int, max: Int)? {
-    if array.isEmpty { return nil}
-    var currentMin = array[0]
-    var currentMax = array[0]
-    for value in array[1..<array.count] {
-        if value < currentMin {
-            currentMin = value
-        } else if value > currentMax{
-            currentMax = value
-        }
+//func minMaxi(array: [Int]) -> (min: Int, max: Int)? {
+//    if array.isEmpty { return nil}
+//    var currentMin = array[0]
+//    var currentMax = array[0]
+//    for value in array[1..<array.count] {
+//        if value < currentMin {
+//            currentMin = value
+//        } else if value > currentMax{
+//            currentMax = value
+//        }
+//    }
+//    return (currentMin, currentMax)
+//}
+//minMaxi(array: [])
+//if let bound = minMaxi(array: []) {
+//    print(bound)
+//    print(bound.min, bound.max)
+//}
+
+// Variadic parameters- parameters are passed as an array of the same type as mentioned during function is defined
+
+func arithmeticMean(_ numbers: Double...) -> Double {
+    var total: Double = 0
+    for number in numbers {
+        total += number
     }
-    return (currentMin, currentMax)
+    return total / Double(numbers.count)
 }
-minMaxi(array: [])
-if let bound = minMaxi(array: []) {
-    print(bound)
-    print(bound.min, bound.max)
-}
-
-
+arithmeticMean(54,2435,55,64,666,5)
 
 
 
