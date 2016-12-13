@@ -770,27 +770,45 @@ import UIKit
 
 // Function types as return types
 
-func stepBackward(_ input: Int) -> Int {
-    return input - 1
-}
+//func stepBackward(_ input: Int) -> Int {
+//    return input - 1
+//}
+//
+//func stepForward(_ input: Int) -> Int {
+//    return input + 1
+//}
+//
+//func chooseFunction(backward: Bool) -> (Int) -> Int {
+//    return backward ? stepBackward : stepForward
+//}
+//var currentValue = 3
+//var moveToZero = chooseFunction(backward: currentValue > 0)
+//print("Counting to zero")
+//
+//while currentValue != 0 {
+//    print(currentValue)
+//    currentValue = moveToZero(currentValue)
+//}
+//print("Zero")
 
-func stepForward(_ input: Int) -> Int {
-    return input + 1
-}
+// GENERICS
 
-func chooseFunction(backward: Bool) -> (Int) -> Int {
-    return backward ? stepBackward : stepForward
+//Generic version of swapTwoInts function to make it compatible to any type
+func swapTwoValues<T>(_ a: inout T,_ b: inout T )-> (T, T) {
+    var tempA = a
+    a = b
+    b = tempA
+    return(a,b)
 }
-var currentValue = 3
-var moveToZero = chooseFunction(backward: currentValue > 0)
-print("Counting to zero")
+// called for type Int
+var someInt = 4.3
+var otherInt = 59.8
+swapTwoValues(&someInt, &otherInt)
 
-while currentValue != 0 {
-    print(currentValue)
-    currentValue = moveToZero(currentValue)
-}
-print("Zero")
-
+// called for String type- works for both types
+var someString = "Hello"
+var otherString = "John"
+swapTwoValues(&someString, &otherString)
 
 
 
