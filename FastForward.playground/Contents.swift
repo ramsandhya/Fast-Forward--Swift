@@ -759,14 +759,38 @@ import UIKit
 //print(one,another)
 
 // FUnction types
-func addTwoInts(_ a: Int, _ b: Int) -> Int {
-    return a + b
+//func addTwoInts(_ a: Int, _ b: Int) -> Int {
+//    return a + b
+//}
+//func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
+//    return a * b
+//}
+//var mathFunction: (Int, Int) -> Int = addTwoInts
+//mathFunction(3, 5)
+
+// Function types as return types
+
+func stepBackward(_ input: Int) -> Int {
+    return input - 1
 }
-func multiplyTwoInts(_ a: Int, _ b: Int) -> Int {
-    return a * b
+
+func stepForward(_ input: Int) -> Int {
+    return input + 1
 }
-var mathFunction: (Int, Int) -> Int = addTwoInts
-mathFunction(3, 5)
+
+func chooseFunction(backward: Bool) -> (Int) -> Int {
+    return backward ? stepBackward : stepForward
+}
+var currentValue = 3
+var moveToZero = chooseFunction(backward: currentValue > 0)
+print("Counting to zero")
+
+while currentValue != 0 {
+    print(currentValue)
+    currentValue = moveToZero(currentValue)
+}
+print("Zero")
+
 
 
 
