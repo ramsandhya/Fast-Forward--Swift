@@ -794,21 +794,31 @@ import UIKit
 // GENERICS
 
 //Generic version of swapTwoInts function to make it compatible to any type
-func swapTwoValues<T>(_ a: inout T,_ b: inout T )-> (T, T) {
-    var tempA = a
-    a = b
-    b = tempA
+//func swapTwoValues<T, G>(_ a: inout T,_ b: inout G )-> (T, G) {
+//    let tempA = a
+//    a = b
+//    b = tempA
+//    return(a,b)
+//}
+//// called for type Int
+//var someInt: Double = 4.3
+//var otherInt: Int = 59
+//swapTwoValues(&someInt, &otherInt)
+//
+//// called for String type- works for both types
+//var someString = "Hello"
+//var otherString = "John"
+//swapTwoValues(&someString, &otherString)
+
+// Generics with two parameter types
+func swapTwoValues<T, G>(_ a: inout T,_ b: inout G )-> (T, G) {
     return(a,b)
 }
 // called for type Int
-var someInt = 4.3
-var otherInt = 59.8
+var someInt: Double = 4.3
+var otherInt: Int = 59
 swapTwoValues(&someInt, &otherInt)
 
-// called for String type- works for both types
-var someString = "Hello"
-var otherString = "John"
-swapTwoValues(&someString, &otherString)
 
 
 
