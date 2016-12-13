@@ -811,17 +811,25 @@ import UIKit
 //swapTwoValues(&someString, &otherString)
 
 // Generics with two parameter types
-func swapTwoValues<T, G>(_ a: inout T,_ b: inout G )-> (T, G) {
-    return(a,b)
+//func swapTwoValues<T, G>(_ a: inout T,_ b: inout G )-> (T, G) {
+//    return(a,b)
+//}
+//// called for type Int
+//var someInt: Double = 4.3
+//var otherInt: Int = 59
+//swapTwoValues(&someInt, &otherInt)
+
+// Stack- just like array or dictionary but with 2 main functions push and pop
+
+struct stackedStruct<Element> {
+    var items: [Element] = []   //property of the struct
+    mutating func push(item: Element) { // first function of the struct
+        items.append(item)
+    }
+    mutating func pop() -> Element {
+        return items.removeLast()
+    }
 }
-// called for type Int
-var someInt: Double = 4.3
-var otherInt: Int = 59
-swapTwoValues(&someInt, &otherInt)
-
-
-
-
 
 
 
