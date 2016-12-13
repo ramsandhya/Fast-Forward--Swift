@@ -826,10 +826,25 @@ struct stackedStruct<Element> {
     mutating func push(item: Element) { // first function of the struct
         items.append(item)
     }
-    mutating func pop() -> Element {
+    mutating func pop() -> Element { //second function of the struct
         return items.removeLast()
     }
 }
+
+// pushing an item to the stack
+var stackOfString = stackedStruct<String>()
+stackOfString.push(item: "uno")
+stackOfString.push(item: "dos")
+stackOfString.push(item: "tres")
+stackOfString.push(item: "cuatro")
+print(stackOfString)
+
+
+
+
+
+
+
 
 
 
