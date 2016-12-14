@@ -526,7 +526,7 @@ import UIKit
 //for item in shoppingList {
 //    print(item)
 //}
-//
+//// enumerated lets you print the index and the value both.
 //for (index, item) in shoppingList.enumerated() {
 //    print("\(index). \(item) ")
 //}
@@ -821,25 +821,40 @@ import UIKit
 
 // Stack- just like array or dictionary but with 2 main functions push and pop
 
-struct stackedStruct<Element> {
-    var items: [Element] = []   //property of the struct
-    mutating func push(item: Element) { // first function of the struct
-        items.append(item)
+//struct stackedStruct<Element> {
+//    var items: [Element] = []   //property of the struct
+//    mutating func push(item: Element) { // first function of the struct
+//        items.append(item)
+//    }
+//    mutating func pop() -> Element { //second function of the struct
+//        return items.removeLast()
+//    }
+//}
+//
+//// pushing an item to the stack
+//var stackOfString = stackedStruct<String>()
+//stackOfString.push(item: "uno")
+//stackOfString.push(item: "dos")
+//stackOfString.push(item: "tres")
+//stackOfString.push(item: "cuatro")
+//print(stackOfString)
+//
+//let popItem = stackOfString.pop()
+
+// Type Constraints
+
+func findIndex(ofString valueToFind: String, in array: [String]) -> Int?{
+    for (index, value) in array.enumerated() {
+        if value == valueToFind {
+            return index
+        }
     }
-    mutating func pop() -> Element { //second function of the struct
-        return items.removeLast()
-    }
+    return nil
 }
-
-// pushing an item to the stack
-var stackOfString = stackedStruct<String>()
-stackOfString.push(item: "uno")
-stackOfString.push(item: "dos")
-stackOfString.push(item: "tres")
-stackOfString.push(item: "cuatro")
-print(stackOfString)
-
-
+let strings = ["Chocolate Spread", "Cheese", "Butter"]
+if let foundIndex = findIndex(ofString: "Cheese", in: strings) {
+    print(foundIndex)
+}
 
 
 
