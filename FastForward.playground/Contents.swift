@@ -842,8 +842,22 @@ import UIKit
 //let popItem = stackOfString.pop()
 
 // Type Constraints
+// Non-Generic function
+//func findIndex(ofString valueToFind: String, in array: [String]) -> Int?{
+//    for (index, value) in array.enumerated() {
+//        if value == valueToFind {
+//            return index
+//        }
+//    }
+//    return nil
+//}
+//let strings = ["Chocolate Spread", "Cheese", "Butter"]
+//if let foundIndex = findIndex(ofString: "Butter", in: strings) {
+//    print(foundIndex)
+//}
 
-func findIndex(ofString valueToFind: String, in array: [String]) -> Int?{
+// Generic function with Equatable
+func findIndex<T: Equatable>(of valueToFind:T , in array: [T]) -> Int? {
     for (index, value) in array.enumerated() {
         if value == valueToFind {
             return index
@@ -851,12 +865,8 @@ func findIndex(ofString valueToFind: String, in array: [String]) -> Int?{
     }
     return nil
 }
-let strings = ["Chocolate Spread", "Cheese", "Butter"]
-if let foundIndex = findIndex(ofString: "Cheese", in: strings) {
-    print(foundIndex)
-}
-
-
+let DoubleIndex = findIndex(of: 3.4, in: [4.5, 66.2, 22.3])
+let stringIndex = findIndex(of: "Hello", in: ["Bon jour", "Namaste", "Hola", "Hello", "Konnichiwa"])
 
 
 
