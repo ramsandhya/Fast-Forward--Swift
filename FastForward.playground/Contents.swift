@@ -877,29 +877,50 @@ protocol Container {
 }
 
 // Non-generic- we are creating a custom stack type which is a struct also struct named stackInt which comforms to the  Container protocol
-struct IntStack: Container {
-    // Original intStack implementation
-    var items = [Int]()
-    mutating func push(_ item: Int) {
+//struct IntStack: Container {
+//    // Original intStack implementation
+//    var items = [Int]()
+//    mutating func push(_ item: Int) {
+//        items.append(item)
+//    }
+//    mutating func pop() -> Int  {
+//        return items.removeLast()
+//    }
+//    // conformance to the Container protocol
+//    typealias ItemType = Int
+//    mutating func append(_ item: Int) {
+//        self.push(item)
+//    }
+//    var count: Int {
+//        return items.count
+//    }
+//    subscript(i: Int) -> Int {
+//        return items[i]
+//    }
+//}
+
+//Generic stack type conforming to protocol
+// Element is the type parameter
+struct Stack<Element>: Container {
+    var items = [Element]()
+    mutating func push(_ item: Element) {
         items.append(item)
     }
-    mutating func pop() -> Int  {
+    mutating func pop() -> Element {
         return items.removeLast()
     }
-    // conformance to the Container protocol
-    typealias ItemType = Int
-    mutating func append(_ item: Int) {
+    typealias ItemType = Element
+    mutating func append(_ item: Element) {
         self.push(item)
     }
     var count: Int {
         return items.count
     }
-    subscript(i: Int) -> Int {
+    subscript(i: Int) -> Element {
         return items[i]
     }
+    
 }
-
-
 
 
 
