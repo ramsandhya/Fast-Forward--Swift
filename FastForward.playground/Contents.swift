@@ -856,17 +856,57 @@ import UIKit
 //    print(foundIndex)
 //}
 
-// Generic function with Equatable
-func findIndex<T: Equatable>(of valueToFind:T , in array: [T]) -> Int? {
-    for (index, value) in array.enumerated() {
-        if value == valueToFind {
-            return index
-        }
-    }
-    return nil
+//// Generic function with Equatable
+//func findIndex<T: Equatable>(of valueToFind:T , in array: [T]) -> Int? {
+//    for (index, value) in array.enumerated() {
+//        if value == valueToFind {
+//            return index
+//        }
+//    }
+//    return nil
+//}
+//let DoubleIndex = findIndex(of: 3.4, in: [4.5, 66.2, 22.3])
+//let stringIndex = findIndex(of: "Hello", in: ["Bon jour", "Namaste", "Hola", "Hello", "Konnichiwa"])
+
+// Associated types
+protocol Container {
+    associatedtype ItemType
+    mutating func append(_ item: ItemType)
+    var count: Int { get }
+    subscript(i: Int) -> ItemType { get }
 }
-let DoubleIndex = findIndex(of: 3.4, in: [4.5, 66.2, 22.3])
-let stringIndex = findIndex(of: "Hello", in: ["Bon jour", "Namaste", "Hola", "Hello", "Konnichiwa"])
+
+// Non-generic- we are creating a custom stack type which is a struct also struct named stackInt which comforms to the  Container protocol
+struct IntStack: Container {
+    // Original intStack implementation
+    var items = [Int]()
+    mutating func push(_ item: Int) {
+        items.append(item)
+    }
+    mutating func pop() -> Int  {
+        return items.removeLast()
+    }
+    // conformance to the Container protocol
+    typealias ItemType = Int
+    mutating func append(_ item: Int) {
+        self.push(item)
+    }
+    var count: Int {
+        return items.count
+    }
+    subscript(i: Int) -> Int {
+        return items[i]
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -890,8 +930,12 @@ Takeways:
  
 4. A function can have at most one variadic parameter
 5. The parameters in a function is constant by default. It's value cannot be changed.
-   If we need to chenge it then we need to define the parameter as inout after the type is written. Inout makes the parameter act as a variable.
+   If we need to change it then we need to define the parameter as inout after the type is written. Inout makes the parameter act as a variable.
    In-out parameters can't have a default value. Variadic parameters can't have inout keyword.
+5. The String, Int, DOuble are data structure type. They are literal values. They are passed by values. The values are copied if they are pass somewhere. 
+6. Classes are passed by reference and Struct is passed by value.
+
+ 
 */
 
 
