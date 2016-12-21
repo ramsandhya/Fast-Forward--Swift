@@ -922,6 +922,11 @@ struct Stack<Element>: Container {
     
 }
 
+// PROTOCOLS
+// Mutating methods requirements in protocols
+protocol Togglable {    // We are defining protocol which has a mutating method
+    mutating func toggle()
+}
 
 
 
