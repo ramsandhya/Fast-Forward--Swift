@@ -924,9 +924,27 @@ struct Stack<Element>: Container {
 
 // PROTOCOLS
 // Mutating methods requirements in protocols
-protocol Togglable {    // We are defining protocol which has a mutating method
+
+// We are defining protocol which has a mutating method, mutating keyword is written only for the structures/enums implementation and not for the class implementation. Till now the method has not been called yet by the instances of the value or reference types(structs/enums or class)
+protocol Togglable {
     mutating func toggle()
 }
+// Defining emum
+enum SwitchOnOff : Togglable {
+    case on, off
+    mutating func toggle() {
+        switch self {
+        case .on:
+            self = .off
+        case .off:
+            self = .on
+        }
+    }
+}
+// Creating an instance of th enum
+var lightSwitch = SwitchOnOff.off
+lightSwitch.toggle()
+lightSwitch.toggle()
 
 
 
