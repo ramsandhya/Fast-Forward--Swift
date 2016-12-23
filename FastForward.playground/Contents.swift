@@ -946,6 +946,12 @@ var lightSwitch = SwitchOnOff.off
 lightSwitch.toggle()
 lightSwitch.toggle()
 
+// Protocols can have initializers just like normal initializers
+protocol SomeProtocol {
+    init(someParameter: Int)
+}
+
+
 
 
 
